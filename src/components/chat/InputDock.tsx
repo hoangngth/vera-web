@@ -58,7 +58,7 @@ export default function InputDock({ onSendMessage, disabled }: InputDockProps) {
               placeholder="Type your message..."
               disabled={disabled}
               rows={1}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl resize-none outline-none transition-all duration-200 focus:border-cyan-500/50 focus:shadow-[0_0_20px_rgba(0,217,255,0.4)] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl resize-none outline-none transition-all duration-200 focus:border-cyan-500/50 focus:shadow-[0_0_20px_rgba(0,217,255,0.4)] disabled:opacity-50 disabled:cursor-not-allowed scrollbar-hide"
               style={{ 
                 fontFamily: 'JetBrains Mono, monospace',
                 fontSize: '15px',
