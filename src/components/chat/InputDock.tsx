@@ -29,7 +29,12 @@ export default function InputDock({ onSendMessage, disabled }: InputDockProps) {
   };
 
   const handleVoiceComplete = (transcript: string) => {
-    onSendMessage(transcript, true);
+    // Populate the text input with the transcribed text instead of sending directly
+    setInputValue(transcript);
+    // Focus the textarea so user can edit or send
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
   };
 
   // Auto-resize textarea
