@@ -38,14 +38,17 @@ export default function ChatInterface() {
       }
 
       // Call API
-      const response = await fetch(`${import.meta.env.VITE_VERA_API_URL}chat`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_VERA_API_KEY}`,
+      const response = await fetch(
+        `${import.meta.env.VITE_VERA_API_URL}/chat`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_VERA_API_KEY}`,
+          },
+          body: JSON.stringify(requestBody),
         },
-        body: JSON.stringify(requestBody),
-      });
+      );
 
       if (!response.ok) {
         throw new Error(`API error: ${response.status}`);
