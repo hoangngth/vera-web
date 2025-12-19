@@ -31,16 +31,18 @@ const MessageThread = forwardRef<HTMLDivElement, MessageThreadProps>(
             </div>
           )}
           
-          {messages.map((message, index) => (
-            <MessageBubble 
-              key={message.id} 
-              message={message}
-              onRetry={onRetry}
-              isLatest={index === messages.length - 1}
-            />
-          ))}
-          
-          {isProcessing && <ThinkingIndicator isVoiceProcessing={isVoiceProcessing} />}
+          <div className="space-y-6">
+            {messages.map((message, index) => (
+              <MessageBubble 
+                key={message.id} 
+                message={message}
+                onRetry={onRetry}
+                isLatest={index === messages.length - 1}
+              />
+            ))}
+            
+            {isProcessing && <ThinkingIndicator isVoiceProcessing={isVoiceProcessing} />}
+          </div>
         </div>
       </div>
     );
