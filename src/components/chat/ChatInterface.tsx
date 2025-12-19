@@ -38,7 +38,7 @@ export default function ChatInterface() {
       }
 
       // Call API
-      const response = await fetch(`${import.meta.env.VITE_VERA_API_URL}/chat`, {
+      const response = await fetch(`${import.meta.env.VITE_VERA_API_URL}chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
