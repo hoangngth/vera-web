@@ -22,7 +22,7 @@ const MessageThread = forwardRef<HTMLDivElement, MessageThreadProps>(
             <div className="flex items-center justify-center h-full min-h-[400px]">
               <div className="text-center space-y-4">
                 <h2 className="text-3xl font-bold text-cyan-400" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                  Voice-Enabled Chat
+                  What can I help with?
                 </h2>
                 <p className="text-white text-sm" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
                   Type a message or use voice input to start
